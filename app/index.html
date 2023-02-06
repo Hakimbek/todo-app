@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="todo-list/todo-list.style.css" />
+    <script src="lib/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="todo-list/todo-list.module.js"></script>
+    <script src="edit-todo/edit-todo.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="todo-list/todo-list.component.js"></script>
+    <script src="edit-todo/edit-todo.component.js"></script>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <div ng-view></div>
+    </div>
+  </body>
+</html>
