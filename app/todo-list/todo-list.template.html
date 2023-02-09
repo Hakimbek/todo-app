@@ -19,19 +19,19 @@
   <div class="col">
     <div
       ng-repeat="todo in $ctrl.todoList track by todo.id"
-      class="my-3 d-flex justify-content-between rounded-pill align-items-center px-4 py-3 bg-white border {{ todo.status ? 'border-success' : 'border-danger' }}">
+      ng-class="['my-3 d-flex justify-content-between rounded-pill align-items-center px-4 py-3 bg-white border', todo.status ? 'border-success' : 'border-danger']">
       <div>
         <input type="checkbox" class="form-check-input" ng-change="$ctrl.handleStatus(todo.id)" ng-model="todo.status">
       </div>
-      <div class="text-primary w-75 fs-4 fw-bold {{ todo.status ? 'text-success' : 'text-danger' }}">
+      <div ng-class="['text-primary w-75 fs-4 fw-bold', todo.status ? 'text-success' : 'text-danger']">
         {{ todo.title }}
       </div>
       <div class="d-flex">
         <div class="mx-1" >
-          <a href="#!/edit/{{todo.id}}" class="btn btn-primary px-2 py-1">Edit</a>
+          <button type="button" class="btn btn-primary px-2 py-1" ng-click="$ctrl.editTodo(todo.id)">Edit</button>
         </div>
         <div class="mx-1">
-          <button class="btn px-2 py-1 btn-danger" ng-click="$ctrl.deleteTodo(todo.id)">Delete</button>
+          <button type="button" class="btn px-2 py-1 btn-danger" ng-click="$ctrl.deleteTodo(todo.id)">Delete</button>
         </div>
       </div>
     </div>

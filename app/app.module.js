@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('todoApp', [
-    'ngRoute',
     'todoList',
-    'editTodo'
+    'editTodo',
+    'ui.router'
 ]);

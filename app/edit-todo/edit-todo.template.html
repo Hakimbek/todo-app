@@ -4,7 +4,7 @@
       <p class="fs-4 fw-bold text-primary text-center">Edit TODO title</p>
       <input type="text" name="title" class="form-control my-3" ng-model="$ctrl.title" ng-required="true">
       <div class="d-flex justify-content-end w-100">
-        <a href="#!/todo" class="btn btn-danger mx-1 w-100">Close</a>
+        <button type="button" ng-click="$ctrl.close()" class="btn btn-danger mx-1 w-100">Close</button>
         <button type="submit" ng-click="$ctrl.editTodo()" class="btn btn-primary mx-1 w-100" ng-disabled="form.title.$invalid">Edit</button>
       </div>
     </form>

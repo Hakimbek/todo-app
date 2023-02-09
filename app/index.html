@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
     <script src="lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs@1.0.7/release/angular-ui-router.min.js"></script>
     <script src="app.module.js"></script>
     <script src="todo-list/todo-list.module.js"></script>
     <script src="edit-todo/edit-todo.module.js"></script>
@@ -16,7 +16,7 @@
   </head>
   <body class="bg-light">
     <div class="container">
-      <div ng-view></div>
+      <div ui-view></div>
     </div>
   </body>
 </html>

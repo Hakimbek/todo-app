@@ -2,16 +2,18 @@
 
 angular.
   module('todoApp').
-    config(['$routeProvider',
-      function config($routeProvider) {
-        $routeProvider.
-          when('/todo', {
+    config(['$stateProvider', '$urlRouterProvider',
+      function config($stateProvider, $urlRouterProvider) {
+        $stateProvider.
+          state('todo', {
+            url: '/todo',
             template: '<todo-list></todo-list>'
           }).
-          when('/edit/:todoId', {
+          state('edit', {
+            url: '/edit/:todoId',
             template: '<edit-todo></edit-todo>'
-          }).
-          otherwise('/todo');
+          });
+        $urlRouterProvider.otherwise('/todo');
     }
 ]).run(function () {
   if (!localStorage.todoList) {
